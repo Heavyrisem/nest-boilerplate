@@ -14,7 +14,7 @@ import { User } from '~src/user/user.entity';
       database: process.env.DB_NAME,
       synchronize: true,
       logging: true,
-      entities: [User],
+      entities: [],
     }),
   ],
 })

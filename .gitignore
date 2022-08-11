@@ -1,5 +1,5 @@
 # DB
-/mysql
+mysql/data
 
 # compiled output
 /dist
