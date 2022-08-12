@@ -23,6 +23,3 @@ services:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: nest_db
       time_zone: UTC
-  my-test:
-    image: ubuntu
-    command: tail -F anything
