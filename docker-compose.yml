@@ -1,21 +1,21 @@
 version: '3'
 
 services:
-  server:
-    build: .
-    ports:
-      - '3000:3000'
-    depends_on:
-      - db
-    env_file:
-      - .env.production
+  # server:
+  #   build: .
+  #   ports:
+  #     - '3000:3000'
+  #   depends_on:
+  #     - db
+  #   env_file:
+  #     - .env.production
   db:
     image: mysql
     restart: always
     ports:
-      - 3306:3306
+      - 33006:3306
     volumes:
-      - ./mysql/data:/var/lib/mysql
+      - db_volume:/var/lib/mysql
       - ./mysql/config:/etc/mysql/conf.d
       - ./mysql/config/init.sql:/data/application/init.sql
     command: --init-file /data/application/init.sql
@@ -23,3 +23,5 @@ services:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: nest_db
       time_zone: UTC
+volumes:
+  db_volume:

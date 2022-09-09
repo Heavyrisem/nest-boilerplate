@@ -1,9 +1,9 @@
-import { Column, PrimaryColumn } from 'typeorm';
+import { Column, Entity } from 'typeorm';
 
-export class User {
-  @PrimaryColumn()
-  id: number;
+import { CoreEntity } from '~src/modules/database/core.entity';
 
+@Entity()
+export class User extends CoreEntity {
   @Column()
   email: string;
 

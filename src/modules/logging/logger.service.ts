@@ -7,7 +7,7 @@ const { errors, combine, json, timestamp, ms, prettyPrint } = winston.format;
 export class LoggerService implements LS {
   private logger: winston.Logger;
 
-  constructor(service) {
+  constructor(service: string) {
     this.logger = winston.createLogger({
       format: combine(
         errors({ stack: true }),
