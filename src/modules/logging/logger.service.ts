@@ -1,6 +1,7 @@
-import { LoggerService as LS } from '@nestjs/common';
 import { utilities as nestWinstonModuleUtilities } from 'nest-winston';
 import * as winston from 'winston';
+
+import { LoggerService as LS } from '@nestjs/common';
 
 const { errors, combine, json, timestamp, ms, prettyPrint } = winston.format;
 
